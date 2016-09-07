@@ -40,8 +40,8 @@ class Display():
     def build_display(self):
         # import pdb; pdb.set_trace()    	
         
-        # os.system('clear')
-        print("*" * 10)
+        os.system('clear')
+        # print("*" * 10)
 
         self.title()
 
