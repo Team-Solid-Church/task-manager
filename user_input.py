@@ -7,5 +7,5 @@ class UserInput():
         
 
     def get_user_input(self):
-        self.input_string = input(">> ")
+        self.input_string = input("Choose an option from the menu. >> ")
 

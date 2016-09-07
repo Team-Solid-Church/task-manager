@@ -1,8 +1,10 @@
+import os
+
 class Display():
     """What the user will actually see on the screen."""
 
     def __init__(self):
-        pass
+        self.display_info = ""
 
     MENU = {
         "1" : "1 = Add Task",
@@ -14,23 +16,30 @@ class Display():
     }    
 
     def title (self):
-        print("Task Manager")        
+        print("\tTASK MANAGER")        
 
     def menu(self):
+        print("\n")
         for value in sorted(self.MENU.values()):
-            print (value)
+            print ("\t" + value)
 
-    def wizard (self):
-        pass        
+    #information sent back to user from the input_handler        
+    def handler_output (self):
+        print("\n")
+        print("\t" + self.display_info)
 
 
 
     def build_display(self):
         # import pdb; pdb.set_trace()    	
+        
+        os.system('clear')
+        # print("*" * 10)
+
         self.title()
 
         self.menu()
 
-        self.wizard()
+        self.handler_output()
 
         
