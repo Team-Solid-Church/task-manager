@@ -8,11 +8,10 @@ running = True
 
 
 def main():
-    display = Display()
-    user_input = UserInput()
-    input_handler = InputHandler(user_input, display)
-
     task_list = []
+    display = Display(task_list)
+    user_input = UserInput()
+    input_handler = InputHandler(user_input, display, task_list)
 
     while running:
         display.build_display()
