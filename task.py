@@ -6,4 +6,5 @@ class Task (object):
 		self.name = ""
 		self.created_date = ""
 
-			
+	def __str__(self):
+		return self.name

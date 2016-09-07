@@ -3,8 +3,9 @@ import os
 class Display():
     """What the user will actually see on the screen."""
 
-    def __init__(self):
+    def __init__(self, task_list):
         self.display_info = ""
+        self.task_list = task_list
 
     MENU = {
         "1" : "1 = Add Task",
