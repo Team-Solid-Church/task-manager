@@ -5,5 +5,4 @@ class InputHandler():
         self.user_input = user_input
 
     def menu_handler(self):
-        if self.user_input:
-            print(self.user_input)
+        print(self.user_input.input_string)
