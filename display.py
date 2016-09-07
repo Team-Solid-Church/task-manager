@@ -19,8 +19,13 @@ class Display():
 
     def menu(self):
         print("\n")
-        for value in self.current_menu.values():
-            print ("\t" + str(value))
+        try:
+            for value in sorted(self.current_menu.values()):
+                print ("\t" + str(value))
+        except TypeError:
+            self.current_menu = {str(key): value for key, value in self.current_menu.items()}
+            for key in sorted(self.current_menu):
+                print("\t{} = {}".format(key, self.current_menu[key]))
 
     def title (self):
         print("\tTASK MANAGER")        

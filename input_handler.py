@@ -31,7 +31,6 @@ class InputHandler():
 
     def create_sub_menu(self):
         sorted_sub_menu = sort_task_list(self.task_list)
-        print (sorted_sub_menu)
         sorted_sub_menu["Q"] = "Q = Back"
         self.sub_menu_dict = sorted_sub_menu
 
