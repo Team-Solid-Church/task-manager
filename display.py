@@ -19,8 +19,8 @@ class Display():
 
     def menu(self):
         print("\n")
-        for value in sorted(self.current_menu.values()):
-            print ("\t" + value)
+        for value in self.current_menu.values():
+            print ("\t" + str(value))
 
     def title (self):
         print("\tTASK MANAGER")        
