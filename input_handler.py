@@ -4,10 +4,9 @@ import datetime
 from task import Task
 from display import MENU
 
+
 def sort_task_list(task_list):        
-    print("task list: " + task_list)
-    return {index + 1 : item for index, item in enumerate(task_list)}        
-     
+    return {index + 1 : item for index, item in enumerate(task_list)}
 
 
 class InputHandler():
@@ -32,14 +31,14 @@ class InputHandler():
 
     def create_sub_menu(self):
         sorted_sub_menu = sort_task_list(self.task_list)
-        print (sorted_sub_menu)
         sorted_sub_menu["Q"] = "Q = Back"
-        self.sub_menu_dict = sorted_sub_menu        
+        self.sub_menu_dict = sorted_sub_menu
 
 
     def wizard_remove_task(self):
         if self.task_list:
-            self.display.display_info = self.create_sub_menu()
+            self.create_sub_menu()
+            self.display.current_menu = self.sub_menu_dict
         else:
             self.display.display_info = "No tasks to display."
 
